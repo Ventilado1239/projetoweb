@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Garante que o HTML e o Body ocupem 100% da altura e largura da viewport */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Evita barra de rolagem horizontal indesejada */
+  font-family: "Inter", sans-serif; /* Define a fonte padrão, se não estiver definida em outro lugar */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Se você tiver um fundo padrão para o aplicativo, pode definir aqui */
+body {
+  background-color: #f0f2f5; /* Cor de fundo para o body */
+}
+
+/* Você pode adicionar estilos globais para botões, inputs, etc. aqui */
+button {
+  cursor: pointer;
+}
