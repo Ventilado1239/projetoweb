@@ -60,12 +60,12 @@ connect-frontend/
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/seu-usuario/connect-frontend.git
+git clone https://github.com/Ventilado1239/projetoweb.git
 
 2. **Acesse a pasta do projeto:**
 
 ```bash
-cd connect-frontend
+cd projetoweb
 
 3. **Instale as dependências:**
 
