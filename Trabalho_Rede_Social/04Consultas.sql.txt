@@ -1,0 +1,67 @@
+
+
+-- Consulta 1: Busca todos os posts de um usuário específico (neste caso, o usuário com id = 1).
+SELECT 
+    u.username,
+    p.content_type,
+    p.content,
+    p.media_url,
+    p.createdAt
+FROM posts AS p
+JOIN users AS u ON p.userId = u.id
+WHERE u.id = 1
+ORDER BY p.createdAt DESC;
+
+
+-- Consulta 2: Busca um post específico (id = 2) e todos os seus comentários, junto com o nome de quem comentou.
+SELECT
+    p.content AS post_content,
+    c.content AS comment_content,
+    u.username AS comment_author,
+    c.createdAt AS comment_date
+FROM comments AS c
+JOIN posts AS p ON c.postId = p.id
+JOIN users AS u ON c.userId = u.id
+WHERE p.id = 2
+ORDER BY c.createdAt ASC;
+
+
+-- Consulta 3: Lista os 5 posts mais populares, com base no número de curtidas ('positive' ratings).
+SELECT
+    p.id AS postId,
+    p.content,
+    u.username,
+    COUNT(r.id) AS like_count
+FROM posts AS p
+JOIN ratings AS r ON p.id = r.postId
+JOIN users AS u ON p.userId = u.id
+WHERE r.rating_type = 'positive'
+GROUP BY p.id, p.content, u.username
+ORDER BY like_count DESC
+LIMIT 5;
+
+
+-- Consulta 4: Mostra um "feed" de notícias para um usuário (id = 1), exibindo os posts das pessoas que ele segue.
+
+SELECT
+    p.id,
+    p.content,
+    p.media_url,
+    p.createdAt,
+    u.username AS author_username,
+    u.profile_picture_url AS author_profile_pic
+FROM posts AS p
+JOIN users AS u ON p.userId = u.id
+JOIN connections AS c ON p.userId = c.followingId
+WHERE c.followerId = 1 -- ID do usuário que está vendo o feed
+ORDER BY p.createdAt DESC;
+
+
+-- Consulta 5: Encontra todos os usuários que têm interesse em uma tag específica (neste caso, 'tecnologia').
+SELECT
+    u.username,
+    u.email
+FROM users AS u
+JOIN user_tags AS ut ON u.id = ut.userId
+JOIN tags AS t ON ut.tagId = t.id
+WHERE t.name = 'tecnologia';

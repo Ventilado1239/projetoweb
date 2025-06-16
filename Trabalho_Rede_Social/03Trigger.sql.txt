@@ -1,0 +1,18 @@
+
+-- cria uma notificação automaticamente sempre que um usuário ganha um novo seguidor.
+
+-- O DELIMITER usado pra que o MySQL leia todo o bloco BEGIN...END como um único comando.
+DELIMITER $$
+
+CREATE TRIGGER trg_notify_on_follow
+AFTER INSERT ON connections
+FOR EACH ROW
+BEGIN
+    -- Insere uma notificação para o usuário que foi seguido (NEW.followingId).
+    -- A notificação informa quem foi o seguidor (NEW.followerId).
+    INSERT INTO notifications (recipientId, senderId, type, createdAt, updatedAt)
+    VALUES (NEW.followingId, NEW.followerId, 'follow', NOW(), NOW());
+END$$
+
+-- Retorna o DELIMITER ao padrão.
+DELIMITER ;
