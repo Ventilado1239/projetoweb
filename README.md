@@ -1,12 +1,89 @@
-# React + Vite
+# 🌐 Connect - Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao **Connect**, uma rede social focada em promover conexões, compartilhamento de conteúdo, discussões em grupo e comunicação aberta entre os usuários.
 
-Currently, two official plugins are available:
+Este repositório corresponde **exclusivamente ao front-end** do projeto, desenvolvido em **React + Vite**, utilizando também **HTML, CSS e JavaScript**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React
+- ⚡ Vite
+- 🧠 JavaScript (ES6+)
+- 🎨 HTML5
+- 🎨 CSS3
+
+---
+
+## 🎯 Funcionalidades do Front-End
+
+- Interface para cadastro e login de usuários
+- Visualização de perfis de usuários e suas postagens
+- Criação de postagens públicas com texto, imagens ou vídeos
+- Interação nas postagens (curtidas, descurtidas, comentários e respostas)
+- Participação e gerenciamento de grupos e comunidades
+- Sistema de mensagens privadas entre usuários
+- Busca de usuários por tags e interesses
+
+---
+
+## 📂 Estrutura do Projeto
+
+connect-frontend/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── pages/
+│ ├── services/
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── .gitignore
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.js
+
+---
+
+## 🧠 Pré-requisitos
+
+- Node.js (versão 16 ou superior)
+- Gerenciador de pacotes (npm ou yarn)
+
+---
+
+## 🛠️ Como Executar o Projeto Localmente
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/seu-usuario/connect-frontend.git
+
+2. **Acesse a pasta do projeto:**
+
+```bash
+cd connect-frontend
+
+3. **Instale as dependências:**
+
+```bash
+npm install
+# ou
+yarn install
+
+4. **Execute o projeto em ambiente de desenvolvimento:**
+
+```bash
+npm run dev
+# ou
+yarn dev
+
+5 **Acesse no navegador:**
+
+```bash
+http://localhost:5173
+
+
