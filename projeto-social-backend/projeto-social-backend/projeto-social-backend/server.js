@@ -27,7 +27,7 @@ app.use('/api/tags', tagRoutes);
 app.use('/api/connections', connectionRoutes);
 app.use('/api/notifications', notificationRoutes);
 
-db.sequelize.sync({ force: true}).then(() => {
+db.sequelize.sync({ force: false}).then(() => {
   console.log('Banco de dados sincronizado com sucesso. ✅');
   
   app.listen(PORT, () => {
