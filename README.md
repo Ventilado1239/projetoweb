@@ -59,31 +59,31 @@ connect-frontend/
 
 1. **Clone o repositório:**
 
-```bash
-git clone https://github.com/Ventilado1239/projetoweb.git
+   ```bash
+   git clone https://github.com/Ventilado1239/projetoweb.git
 
 2. **Acesse a pasta do projeto:**
 
-```bash
-cd projetoweb
+   ```bash
+   cd projetoweb
 
 3. **Instale as dependências:**
 
-```bash
-npm install
-# ou
-yarn install
+   ```bash
+   npm install
+   # ou
+   yarn install
 
 4. **Execute o projeto em ambiente de desenvolvimento:**
 
-```bash
-npm run dev
-# ou
-yarn dev
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
 
 5 **Acesse no navegador:**
 
-```bash
-http://localhost:5173
+   ```bash
+   http://localhost:5173
 
 
